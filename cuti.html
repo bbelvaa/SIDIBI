@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pengajuan Cuti Pegawai</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 50%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin-top: 50px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input[type="text"], input[type="date"], select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        textarea {
+            height: 100px;
+        }
+        input[type="submit"] {
+            background: #4CAF50;
+            color: white;
+            border: 0;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        input[type="submit"]:hover {
+            background: #45a049;
+        }
+        .navbar {
+    width: 1000px;
+    margin: auto;
+  }
+  nav {
+    z-index: 100;
+    color: white;
+    text-align: center;
+    position: fixed;
+    line-height: 60px;
+    width: 100%;
+    background-color: rgba(0, 0, 0);
+  }
+  nav.putih {
+    background-color: white;
+  }
+  nav .brand {
+    font-size: 28px;
+    float: left;
+    position: relative;
+    line-height: 60px;
+    font-weight:bold;
+  }
+  nav .menu {
+    float: right;
+    height: 60px;
+    max-width: 600px;
+  }
+  
+  nav .menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  nav .menu ul li {
+    list-style-type: none;
+    float: left;
+    line-height: 60px;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-align: center;
+    padding: 0px 16px 0px 16px;
+    text-decoration: none;
+  }
+  nav ul li a:hover {
+    text-decoration: underline;
+  }
+
+</style>
+</head>
+<body>
+    <nav>
+        <div class="navbar">
+          <div class="brand">
+              SIDIBI
+          </div>
+          <div class="menu">
+            <a href="#" class="tombol-menu">
+              <span class="garis"></span>
+              <span class="garis"></span>
+              <span class="garis"></span>
+            </a>
+            <ul>
+                <li><a href="homePegawai.php">Home</a></li>
+                <li><a href="pengaduan.html">Pengaduan</a></li>
+                <li><a href="cuti.html">Cuti</a></li>
+                <li><a href="profil.html">Profil</a></li>
+
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <br><br><br><br><br>
+
+    <div class="container">
+        <h1>Pengajuan Cuti Pegawai</h1>
+        <form action="ajukan_cuti.php" method="post">
+            <label for="nama">Nama Pegawai:</label>
+            <input type="text" id="nama" name="nama" required>
+
+            <label for="tanggal_mulai">Tanggal Mulai:</label>
+            <input type="date" id="tanggal_mulai" name="tanggal_mulai" required>
+
+            <label for="tanggal_selesai">Tanggal Selesai:</label>
+            <input type="date" id="tanggal_selesai" name="tanggal_selesai" required>
+
+            <label for="jenis_cuti">Jenis Cuti:</label>
+            <select id="jenis_cuti" name="jenis_cuti" required>
+                <option value="Cuti Tahunan">Cuti Tahunan</option>
+                <option value="Cuti Sakit">Cuti Sakit</option>
+                <option value="Cuti Melahirkan">Cuti Melahirkan</option>
+                <option value="Cuti Penting">Cuti Penting</option>
+            </select>
+
+            <label for="alasan">Alasan Cuti:</label>
+            <textarea id="alasan" name="alasan" required></textarea>
+
+            <input type="submit" value="Ajukan Cuti">
+        </form>
+    </div>
+</body>
+</html>
