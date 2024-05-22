@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tambah Jadwal Shift Pegawai</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        form {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        legend {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        textarea {
+            width: 100%;
+            height: 60px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <form action="updateShift.php" method="post">
+        <legend>Jadwal Shift Pegawai</legend>
+        <div class="form-group">
+            <label for="periode">Periode (YYYY-MM-DD):</label>
+            <input type="date" id="periode" name="periode" required>
+        </div>
+        <fieldset>
+            <legend>Senin</legend>
+            <div class="form-group">
+                <label for="shift_pagi_Senin">Shift Pagi:</label>
+                <textarea id="shift_pagi_Senin" name="shift_pagi_Senin"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="shift_sore_Senin">Shift Sore:</label>
+                <textarea id="shift_sore_Senin" name="shift_sore_Senin"></textarea>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Selasa</legend>
+            <div class="form-group">
+                <label for="shift_pagi_Selasa">Shift Pagi:</label>
+                <textarea id="shift_pagi_Selasa" name="shift_pagi_Selasa"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="shift_sore_Selasa">Shift Sore:</label>
+                <textarea id="shift_sore_Selasa" name="shift_sore_Selasa"></textarea>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Rabu</legend>
+            <div class="form-group">
+                <label for="shift_pagi_Rabu">Shift Pagi:</label>
+                <textarea id="shift_pagi_Rabu" name="shift_pagi_Rabu"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="shift_sore_Rabu">Shift Sore:</label>
+                <textarea id="shift_sore_Rabu" name="shift_sore_Rabu"></textarea>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Kamis</legend>
+            <div class="form-group">
+                <label for="shift_pagi_Kamis">Shift Pagi:</label>
+                <textarea id="shift_pagi_Kamis" name="shift_pagi_Kamis"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="shift_sore_Kamis">Shift Sore:</label>
+                <textarea id="shift_sore_Kamis" name="shift_sore_Kamis"></textarea>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Jumat</legend>
+            <div class="form-group">
+                <label for="shift_pagi_Jumat">Shift Pagi:</label>
+                <textarea id="shift_pagi_Jumat" name="shift_pagi_Jumat"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="shift_sore_Jumat">Shift Sore:</label>
+                <textarea id="shift_sore_Jumat" name="shift_sore_Jumat"></textarea>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Sabtu</legend>
+            <div class="form-group">
+                <label for="shift_pagi_Sabtu">Shift Pagi:</label>
+                <textarea id="shift_pagi_Sabtu" name="shift_pagi_Sabtu"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="shift_sore_Sabtu">Shift Sore:</label>
+                <textarea id="shift_sore_Sabtu" name="shift_sore_Sabtu"></textarea>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Minggu</legend>
+            <div class="form-group">
+                <label for="shift_pagi_Minggu">Shift Pagi:</label>
+                <textarea id="shift_pagi_Minggu" name="shift_pagi_Minggu"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="shift_sore_Minggu">Shift Sore:</label>
+                <textarea id="shift_sore_Minggu" name="shift_sore_Minggu"></textarea>
+            </div>
+        </fieldset>
+        <input type="submit" name="submit" value="Submit">
+    </form>
+</body>
+</html>

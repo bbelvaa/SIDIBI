@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       * {
+            font-family:Georgia, 'Times New Roman', Times, serif;
+            line-height: 20px;
+            font-size: 17px;
+            scroll-behavior: smooth;
+            margin: 0px;
+            padding: 0px;
+        }
+        .navbar {
+            width: 1000px;
+            margin: auto;
+        }
+        nav {
+            z-index: 100;
+            color: white;
+            text-align: center;
+            position: fixed;
+            line-height: 60px;
+            width: 100%;
+            background-color: rgba(0, 0, 0);
+        }
+        nav.putih {
+            background-color: white;
+        }
+        nav .brand {
+            font-size: 28px;
+            float: left;
+            position: relative;
+            line-height: 60px;
+            font-weight:bold;
+        }
+        nav .menu {
+            float: right;
+            height: 60px;
+            max-width: 600px;
+        }
+        nav .menu ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        nav .menu ul li {
+            list-style-type: none;
+            float: left;
+            line-height: 60px;
+        }
+        nav ul li a {
+            color: white;
+            text-align: center;
+            padding: 0px 16px 0px 16px;
+            text-decoration: none;
+          }
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>   
+    <nav>
+        <div class="navbar">
+          <div class="brand">
+              SIDIBI
+          </div>
+          <div class="menu">
+            <a href="#" class="tombol-menu">
+              <span class="garis"></span>
+              <span class="garis"></span>
+              <span class="garis"></span>
+            </a>
+            <ul>
+              <li><a href="pegawai.php">Pegawai</a></li>
+              <li><a href="shift.php">Shift</a></li>
+              <li><a href="pengaduan.html">Pengaduan</a></li>
+              <li><a href="status_cuti.php">Cuti</a></li>
+              <li><a href="profil.html">Profil</a></li>
+
+            </ul>
+          </div>
+        </div>
+    </nav>
+    <br><br><br><br><br>
+    <form action="tambah.php" method="post">
+        <table>
+            <tr>
+                <td>Nama:</td>
+                <td><input type="text" name="nama"></td>
+            </tr>
+            <tr>
+                <td>Jenis Kelamin:</td>
+                <td>
+                    <input type="radio" name="jk" value="Laki-laki"> Laki-laki
+                    <input type="radio" name="jk" value="Perempuan"> Perempuan
+                </td>
+            </tr>
+            <tr>
+                <td>Alamat:</td>
+                <td><input type="text" name="alamat"></td>
+            </tr>
+            <tr>
+                <td>Jabatan:</td>
+                <td>
+                    <select name="jabatan">
+                        <option value="Staf Kasir">Staf Kasir</option>
+                        <option value="Staf Gudang">Staf Gudang</option>
+                    </select>
+                </td>
+            </tr>            
+            <tr>
+                <td>Gaji:</td>
+                <td><input type="text" name="gaji"></td>
+            </tr>
+        </table>
+        <input type="submit" name="submit" value="Submit">
+    </form>
+    
+</body>
+</html>
